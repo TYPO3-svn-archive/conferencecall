@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;tools_txconferencecallM1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">Conference Call T3 Extension</label>
+			<label index="function1">Function #1</label>
+			<label index="function2">Function #2</label>
+			<label index="function3">Function #3</label>
+			<label index="important_links">Importants links: %1$s and %2$s</label>
+			<label index="fuction2_button">Show</label>
+			<label index="m1">January</label>
+			<label index="m2">February</label>
+			<label index="m3">March</label>
+			<label index="m4">April</label>
+			<label index="m5">May</label>
+			<label index="m6">June</label>
+			<label index="m7">July</label>
+			<label index="m8">August</label>
+			<label index="m9">September</label>
+			<label index="m10">October</label>
+			<label index="m11">November</label>
+			<label index="m12">December</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="title">Conference Call T3 Extension</label>
+			<label index="function1">Funktion #1</label>
+			<label index="function2">Funktion #2</label>
+			<label index="function3">Funktion #3</label>
+			<label index="important_links">Importants links: %1$s und %2$s</label>
+			<label index="fuction2_button">Show</label>
+			<label index="m1">Januar</label>
+			<label index="m2">Februar</label>
+			<label index="m3">März</label>
+			<label index="m4">April</label>
+			<label index="m5">Mai</label>
+			<label index="m6">Juni</label>
+			<label index="m7">Juli</label>
+			<label index="m8">August</label>
+			<label index="m9">September</label>
+			<label index="m10">Oktober</label>
+			<label index="m11">November</label>
+			<label index="m12">Dezember</label>
+		</languageKey>
+	</data>
+</T3locallang>

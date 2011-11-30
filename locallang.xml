@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for flexform fields belonging to extension 'conferencecall'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="label.flex1">Developer Center login</label>
+			<label index="label.flex2">Developer Center password</label>
+			<label index="label.flex3">Proxy</label>
+			<label index="label.flex4">Environment</label>
+			<label index="label.flex.sheet1">Connection</label>
+			<label index="label.flex.sheet2">Settings</label>
+			<label index="label.flex.sheet3">Limits</label>
+			<label index="label.flex.sheet4">Links</label>
+			<label index="label.flex.sheet3.timeinterval">Time interval</label>
+			<label index="label.flex.sheet3.timeinterval.option0">10 minutes</label>
+			<label index="label.flex.sheet3.timeinterval.option1">30 minutes</label>
+			<label index="label.flex.sheet3.timeinterval.option2">1 hour</label>
+			<label index="label.flex.sheet3.timeinterval.option3">1 day</label>
+			<label index="label.flex.sheet3.plannedconference">Planning of a conference</label>
+			<label index="label.flex.sheet3.plannedconference.option0">Deny</label>
+			<label index="label.flex.sheet3.plannedconference.option1">Allow only in a current day</label>
+			<label index="label.flex.sheet3.plannedconference.option2">Allow only for a week</label>
+			<label index="label.flex.sheet3.plannedconference.option3">Allow only for a month</label>
+			<label index="label.flex.sheet3.plannedconference.option4">Allow only for 6 months</label>
+			<label index="label.flex.sheet3.plannedconference.option5">Allow</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="label.flex1">Developer Center Login</label>
+			<label index="label.flex2">Developer Center Kennwort</label>
+			<label index="label.flex3">Proxy</label>
+			<label index="label.flex4">Umgebung</label>
+			<label index="label.flex.sheet1">Connection</label>
+			<label index="label.flex.sheet2">Einstellungen</label>
+			<label index="label.flex.sheet3">Einschränkungen</label>
+			<label index="label.flex.sheet4">Links</label>
+			<label index="label.flex.sheet3.timeinterval">Zeitraum</label>
+			<label index="label.flex.sheet3.timeinterval.option0">10 Minuten</label>
+			<label index="label.flex.sheet3.timeinterval.option1">30 Minuten</label>
+			<label index="label.flex.sheet3.timeinterval.option2">1 Stunde</label>
+			<label index="label.flex.sheet3.timeinterval.option3">1 Tag</label>
+		</languageKey>
+	</data>
+</T3locallang>

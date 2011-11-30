@@ -1,0 +1,4 @@
+plugin.tx_conferencecall_pi1 {
+	templateFile = EXT:conferencecall/template.html
+	use_internal_jQuery = 1
+}

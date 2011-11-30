@@ -1,0 +1,457 @@
+<html>
+<!-- ###TPL_NEW_CONF### begin -->
+	<div id="conf_new">
+		<!-- ###ERROR### -->
+			<span style="color:red;">###SPN_ERROR_TEXT###</span>
+			<br/>
+			<br/>
+		<!-- ###ERROR### -->
+
+		<!-- ###RESTRICTIONS### -->
+			<span>###SPN_RESTRICTIONS###</span>
+			<br/>
+			<br/>
+		<!-- ###RESTRICTIONS### -->
+
+		<!-- ###ENVIRONMENT### -->
+			<span>###SPN_ENVIRONMENT###</span>
+			<br/>
+			<br/>
+		<!-- ###ENVIRONMENT### -->
+
+		<b>###LBL_NEW_CONF###</b>
+		<br/>
+		<br/>
+		<form action="###FORM_ACTION###" method="POST">
+			<label for="conf_name_input">###LBL_CONF_NAME###</label>
+			<br/>
+			<input type="text" id="conf_name_input" size="40" name="tx_conferencecall_pi1[name]" value="###VAL_CONF_NAME###">
+			<br/>
+			<br/>
+			<label for="conf_desc_input">###LBL_CONF_DESCRIPTION###</label>
+			<br/>
+			<input type="text" id="conf_desc_input" size="40" name="tx_conferencecall_pi1[description]" value="###VAL_CONF_DESCRIPTION###">
+			<br/>
+			<br/>
+			<label for="conf_dur_input">###LBL_CONF_DURATION_MAX###</label>
+			<br/>
+			<input type="text" id="conf_dur_input" size="40" name="tx_conferencecall_pi1[duration]" value="###VAL_CONF_DURATION###">
+			<br/>
+			<br/>
+			<input type="checkbox" id="conf_join_input" name="tx_conferencecall_pi1[joinconfirm]"###CHECKED_JOIN_CONFIRM###>&nbsp;<label for="conf_join_input">###LBL_JOIN_CONFIRMATION###</label>
+			<br/>
+			<br/>
+			<input type="checkbox" id="conf_planned_input" onclick="confcall_view_plannedConference();" name="tx_conferencecall_pi1[schedule]"###CHECKED_PLANNED###>&nbsp;<label for="conf_planned_input">###LBL_PLANNED_CONF###</label>
+			<br/>
+			<br/>
+			<div id="conf_new_datetime" style="###DISPLAY_NONE_CONF_DATE_TIME###">
+				<label>###LBL_CONF_DATE###</label><br/>
+				<input type="text" id="conf_day_input" size="2" maxlength="2" value="###VAL_CONF_DAY###" name="tx_conferencecall_pi1[day]">.<input type="text" id="conf_month_input" size="2" maxlength="2" value="###VAL_CONF_MONTH###" name="tx_conferencecall_pi1[month]">.<input type="text" id="conf_year_input" size="4" maxlength="4" value="###VAL_CONF_YEAR###" name="tx_conferencecall_pi1[year]">
+				<br/><br/>
+				<label>###LBL_CONF_TIME###</label><br/>
+				<input type="text" id="conf_hour_input" size="2" maxlength="2" value="###VAL_CONF_HOUR###" name="tx_conferencecall_pi1[hour]"> : <input type="text" id="conf_minutes_input" size="2" maxlength="2" value="###VAL_CONF_MINUTE###" name="tx_conferencecall_pi1[minutes]">
+				<br/>
+				<br/>
+				<label>###LBL_CONF_RECURRING###</label><br/>
+				<select id="conf_recurring_input" name="tx_conferencecall_pi1[recurring]">
+					<option value="0">###LBL_REPEAT_NO###</option>
+					<!-- ###RECURRING### -->
+					<option value="1">###LBL_REPEAT_HOURLY###</option>
+					<option value="2">###LBL_REPEAT_DAILY###</option>
+					<option value="3">###LBL_REPEAT_WEEKLY###</option>
+					<option value="4">###LBL_REPEAT_MONTHLY###</option>
+					<!-- ###RECURRING### -->
+				</select>
+				<br/>
+				<br/>
+			</div>
+			<!-- ###CAPTCHA### -->
+			<div class="tx_conferencecall_pi1-captcha">
+				<label for="tx_conferencecall_pi1_captcha_response">###LBL_CAPTCHA###</label>
+				<br/>
+				###SR_FREECAP_IMAGE###
+				<br/>
+				###SR_FREECAP_CANT_READ###
+				<br/>
+				###SR_FREECAP_ACCESSIBLE###
+				<input type="text" size="15" id="tx_conferencecall_pi1_captcha_response" name="tx_conferencecall_pi1[captcha_response]" title="###SR_FREECAP_NOTICE###" value="">
+			</div>
+			<br/>
+			<!-- ###CAPTCHA### -->
+			<input type="submit" value="###VAL_CONF_LIST###" name="tx_conferencecall_pi1[viewlist]">
+			&nbsp;
+			<input type="submit" value="###VAL_TEMP_CREATE###" name="tx_conferencecall_pi1[createtemplate]">
+			&nbsp;
+			<input type="submit" value="###VAL_CONF_CREATE###" name="tx_conferencecall_pi1[createconference]">
+		</form>
+	</div>
+<!-- ###TPL_NEW_CONF### end -->
+
+<!-- ###TPL_DISABLED### begin -->
+	<div id="conf_new">
+		<span>###SPN_RESTRICTIONS###</span>
+		<br/>
+		<br/>
+		<form>
+			<label for="conf_name_input">###LBL_CONF_NAME###</label>
+			<br/>
+			<input type="text" id="conf_name_input" size="40" disabled="disabled">
+			<br/>
+			<br/>
+			<label for="conf_desc_input">###LBL_CONF_DESCRIPTION###</label>
+			<br/>
+			<input type="text" id="conf_desc_input" size="40" disabled="disabled">
+			<br/>
+			<br/>
+			<label for="conf_dur_input">###LBL_CONF_DURATION###</label>
+			<br/>
+			<input type="text" id="conf_dur_input" size="40" disabled="disabled">
+			<br/>
+			<br/>
+			<input type="checkbox" id="conf_join_input" disabled="disabled">&nbsp;<label for="conf_join_input">###LBL_JOIN_CONFIRMATION###</label>
+			<br/>
+			<br/>
+			<input type="checkbox" id="conf_planned_input" disabled="disabled">&nbsp;<label for="conf_planned_input">###LBL_PLANNED_CONF###</label>
+			<br/>
+			<br/>
+			<input type="submit" value="###VAL_CONF_LIST###" disabled="disabled">
+			&nbsp;
+			<input type="submit" value="###VAL_TEMP_CREATE###" disabled="disabled">
+			&nbsp;
+			<input type="submit" value="###VAL_CONF_CREATE###" disabled="disabled">
+		</form>
+	</div>
+<!-- ###TPL_DISABLED### end -->
+
+<!-- ###TPL_CONF_LOADER### begin -->
+	<div id="conf_loader" style="display:none;">
+		<img src="###SRC_LOADER###" />
+		<br/><br/>
+	</div>
+<!-- ###TPL_CONF_LOADER### end -->
+
+<!-- ###TPL_CONF_ERROR### begin -->
+	<div id="conf_error_message" style="display:none;">
+		<span id="conf_error_text" style="color:red;"></span>
+		<br/><br/>
+	</div>
+<!-- ###TPL_CONF_ERROR### end -->
+
+<!-- ###TPL_CONF_LIST### begin -->
+	###INCLUDE_LOADER###
+	###INCLUDE_ERROR_MESSAGE###
+	<div id="conf_list">
+		<b>###LBL_CONFERENCES###</b>
+		<br/>
+		<a id="conf_adhoc_link" href="#" onclick="confcall_view_adHocList(); return false;">###LNK_ADHOC###</a>
+		&bull;
+		<a id="conf_planned_link" href="#" onclick="confcall_view_plannedList(); return false;">###LNK_PLANNED###</a>
+		&bull;
+		<a id="conf_failed_link" href="#" onclick="confcall_view_failedList(); return false;">###LNK_FAILED###</a>
+		&bull;
+		<a id="conf_not_commited_link" href="#" onclick="confcall_view_notCommitedList(); return false;">###LNK_NOT_COMMITED###</a>
+		<br/>
+		<br/>
+		<table class="dgtable" id="conf_table">
+			<thead id="conf_list_header">
+				<tr>
+					<td>###LBL_CONF_NAME###</td>
+					<td>###LBL_CONF_DESCRIPTION###</td>
+					<td>###LBL_CONF_DURATION###</td>
+					<td>###LBL_START_TIME###</td>
+					<td>###LBL_PARTICIPANTS###</td>
+					<td>###LBL_ACTION###</td>
+				</tr>
+			</thead>
+			<tbody style="display: none;">
+				<tr>
+					<td colspan="6">
+						<table class="dgtable">
+							<thead id="conf_list_part_header">
+								<tr>
+									<td>###LBL_FIRSTNAME###</td>
+									<td>###LBL_LASTNAME###</td>
+									<td>###LBL_PHONE###</td>
+									<td>###LBL_EMAIL###</td>
+									<td>###LBL_INITIATOR###</td>
+								</tr>
+							</thead>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<a href="###HRF_START_PAGE###">###LNK_BACK###</a>
+		<input type="hidden" id="conf_yes" value="###VAL_YES###"/>
+		<input type="hidden" id="conf_no" value="###VAL_NO###"/>
+	</div>
+<!-- ###TPL_CONF_LIST### end -->
+
+<!-- ###TPL_NEW_TEMPLATE### begin -->
+	###INCLUDE_LOADER###
+	###INCLUDE_ERROR_MESSAGE###
+	<div id="conf_templates">
+		<b>###SPN_TEMPLATES###</b>
+		<br/>
+		<table class="dgtable">
+			<thead>
+				<tr>
+					<td>###LBL_CONF_NAME###</td>
+					<td>###LBL_CONF_DESCRIPTION###</td>
+					<td>###LBL_CONF_DURATION###</td>
+					<td>###LBL_JOIN_CONFIRMATION_SHORT###</td>
+					<td colspan="2">###LBL_ACTION###</td>
+				</tr>
+			</thead>
+			<!-- ###ROW_TEMPLATE### -->
+				<tbody id="###ROW_CONF_ID###">
+					<tr>
+						<td id="###ROW_I_C1###">###ROW_CONF_NAME###</td>
+						<td id="###ROW_I_C2###">###ROW_CONF_DESCRIPTION###</td>
+						<td id="###ROW_I_C3###">###ROW_CONF_DURATION###</td>
+						<td id="###ROW_I_C4###">###ROW_CONF_JOIN_CONFIRM###</td>
+						<td><input type="button" onclick="confcall_core_removeConferenceTemplate('###ROW_CONF_ID###');" value="###VAL_TEMP_DELETE###" class="confcallbutton"></td>
+						<td><input type="button" onclick="confcall_core_runTemplate('###ROW_CONF_ID###');" value="###VAL_TEMP_START###" class="confcallbutton"></td>
+					</tr>
+					<tr >
+						<td colspan="6">
+							<a id="participants_count" href="#" onclick="confcall_view_showParticipants('###ROW_I###'); return false;">###LBL_PARTICIPANTS###:&nbsp;###ROW_PARTICIPANTS_COUNT###</a>
+							<table class="dgtable" id="participants_table###ROW_I###" style="display: none;">
+								<thead>
+									<tr>
+										<td>###LBL_FIRSTNAME###</td>
+										<td>###LBL_LASTNAME###</td>
+										<td>###LBL_PHONE###</td>
+										<td>###LBL_EMAIL###</td>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- ###ROW_PARTICIPANT### -->
+									<tr id="###ROW_PART_ID###">
+										<td id="###ROW_I_C5###">###ROW_PART_FIRSTNAME###</td>
+										<td id="###ROW_I_C6###">###ROW_PART_LASTNAME###</td>
+										<td id="###ROW_I_C7###">###ROW_PART_PHONE###</td>
+										<td id="###ROW_I_C8###">###ROW_PART_EMAIL###</td>
+									</tr>
+								</tbody>
+							<!-- ###ROW_PARTICIPANT### -->
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			<!-- ###ROW_TEMPLATE### -->
+		</table>
+		<br/>
+		<a href="###HRF_START_PAGE###">###LNK_BACK###</a>
+		&bull;
+		<a href="#" id="conf_create_new_template" onclick="confcall_view_showTemplateForm();return false">###LNK_NEW_TEMPLATE###</a>
+		<a href="#" id="conf_cancel_new_template" onclick="confcall_view_hideTemplateForm();return false" style="display:none;">###LNK_TEMPLATE_CANCEL###</a>
+		<!-- <a href="###HRF_START_PAGE###">###LNK_TEMPLATE_CANCEL###</a> -->
+		<br/>
+		<br/>
+		<div id="conf_new_template" style="display:none;">
+			<b>###LBL_CONFERENCE###</b>
+			<br/><br/>
+			<label for="temp_name_input">###LBL_CONF_NAME###</label>
+			<br/>
+			<input type="text" id="temp_name_input" size="40" name="tx_conferencecall_pi1[name]" value="###VAL_CONF_NAME###">
+			<br/>
+			<br/>
+			<label for="temp_desc_input">###LBL_CONF_DESCRIPTION###</label><br/>
+			<input type="text" id="temp_desc_input" size="40" name="tx_conferencecall_pi1[description]" value="###VAL_CONF_DESCRIPTION###">
+			<br/>
+			<br/>
+			<label for="temp_dur_input">###LBL_CONF_DURATION###</label>
+			<br/>
+			<input type="text" id="temp_dur_input" value="60" ###READ_ONLY### size="40" name="tx_conferencecall_pi1[duration]" value="###VAL_CONF_DURATION###">
+			<br/>
+			<br/>
+			<input type="checkbox" id="temp_join_input" name="tx_conferencecall_pi1[joinconfirm]"###CHECKED_JOIN_CONFIRM###>&nbsp;<label for="temp_join_input">###LBL_JOIN_CONFIRMATION###</label>
+			<br/><br/>
+			<b>###LBL_INITIATOR###</b><br/><br/>
+			<label for="temp_init_firstname_input">###LBL_FIRSTNAME###</label>
+			<br/>
+			<input type="text" id="temp_init_firstname_input" size="40" name="tx_conferencecall_pi1[initiator_firstname]" value="###VAL_FIRSTNAME###">
+			<br/>
+			<br/>
+			<label for="temp_init_lastname_input">###LBL_LASTNAME###</label>
+			<br/>
+			<input type="text" id="temp_init_lastname_input" size="40" name="tx_conferencecall_pi1[initiator_lastname]" value="###VAL_LASTNAME###">
+			<br/>
+			<br/>
+			<label for="temp_init_phone_input">###LBL_PHONE###</label>
+			<br/>
+			<input type="text" id="temp_init_phone_input" size="40" name="tx_conferencecall_pi1[initiator_phone]" value="###VAL_PHONE###">
+			<br/>
+			<br/>
+			<label for="temp_init_email_input">###LBL_EMAIL###</label>
+			<br/>
+			<input type="text" id="temp_init_email_input" size="40" name="tx_conferencecall_pi1[initiator_email]" value="###VAL_EMAIL###">
+			<br/>
+			<br/>
+			<input type="button" id="create_template_button" value="###VAL_TEMPLATE_CREATE###" onclick="confcall_core_newTemplate();">
+		</div>
+	</div>
+	<div id="conf_participants_in_temp" style="display: none;">
+		<div id="conf_temp_header">
+			<b>###LBL_CONF_NAME###:</b>&nbsp;<span id="conf_temp_name">###SPN_CONF_TEMP_NAME###</span>
+			<br/>
+			<b>###LBL_CONF_DESCRIPTION###:</b>&nbsp;<span id="conf_temp_description">###SPN_CONF_TEMP_DESCRIPTION###</span>
+			<br/>
+			<b>###LBL_CONF_DURATION###:</b>&nbsp;<span id="conf_temp_duration">###SPN_CONF_TEMP_DURATION###</span>
+			<br/>
+		</div>
+		<div id="conf_temp_participants">
+			<form>
+				<b>###LBL_MAX_PARTICIPANTS###</b>
+				<br/>
+				<table class="dgtable">
+					<thead>
+						<tr>
+							<td>###LBL_FIRSTNAME###</td>
+							<td>###LBL_LASTNAME###</td>
+							<td>###LBL_PHONE###</td>
+							<td>###LBL_EMAIL###</td>
+							<td>###LBL_INITIATOR###</td>
+						</tr>
+					</thead>
+					<tbody id="conf_temp_participants_table"></tbody>
+				</table>
+				<br/>
+				<label for="conf_temp_firstname">###LBL_FIRSTNAME###</label>
+				<br/>
+				<input type="text" id="conf_temp_firstname" size="40">
+				<br/>
+				<br/>
+				<label for="conf_temp_lastname">###LBL_LASTNAME###</label>
+				<br/>
+				<input type="text" id="conf_temp_lastname" size="40">
+				<br/>
+				<br/>
+				<label for="conf_temp_phone">###LBL_PHONE###</label>
+				<br/>
+				<input type="text" id="conf_temp_phone" size="40">
+				<br/>
+				<br/>
+				<label for="conf_temp_email">###LBL_EMAIL###</label>
+				<br/>
+				<input type="text" id="conf_temp_email" size="40">
+				<br/>
+				<br/>
+				<input type="button" id="conf_temp_add_participant_button" value="###VAL_ADD_PARTICIPANT###" onclick="confcall_core_newParticipantInTemplate();">
+				<input type="hidden" id="conf_temp_id" value="">
+			</form>
+			<br/>
+			<a href="###HRF_START_PAGE###" >###LNK_BACK###</a>
+		</div>
+	</div>
+	<input type="hidden" id="conf_id" value="">
+	<input type="hidden" id="conf_yes" value="###VAL_YES###"/>
+	<input type="hidden" id="conf_no" value="###VAL_NO###"/>
+	<input type="hidden" id="conf_remove" value="###VAL_REMOVE###"/>
+<!-- ###TPL_NEW_TEMPLATE### end -->
+
+<!-- ###TPL_PARTICIPANTS### begin -->
+	###INCLUDE_LOADER###
+	###INCLUDE_ERROR_MESSAGE###
+	<div id="conf_header">
+		<b>###LBL_CONF_NAME###:</b>&nbsp;<span id="confname">###SPN_CONF_NAME###</span>
+		<br/>
+		<b>###LBL_CONF_DESCRIPTION###:</b>&nbsp;<span id="confdescription">###SPN_CONF_DESCRIPTION###</span>
+		<br/>
+		<b>###LBL_CONF_DURATION###:</b>&nbsp;<span id="confduration">###SPN_CONF_DURATION###</span>
+		<br/>
+		<b>###LBL_CONF_DATE_TIME###:</b>&nbsp;<span id="confdatetime">###SPN_CONF_DATE_TIME###</span>
+		<br/>
+	</div>
+	<div id="conf_participants">
+		<form id="form_participants">
+			<b>###LBL_MAX_PARTICIPANTS###</b>
+			<br/>
+			<table class="dgtable">
+				<thead>
+					<tr>
+						<td>###LBL_FIRSTNAME###</td>
+						<td>###LBL_LASTNAME###</td>
+						<td>###LBL_PHONE###</td>
+						<td>###LBL_EMAIL###</td>
+						<td>###LBL_INITIATOR###</td>
+						<td>###LBL_ACTION###</td>
+					</tr>
+				</thead>
+				<tbody id="conf_participants_table"></tbody>
+			</table>
+			<br/>
+			<label for="conf_firstname">###LBL_FIRSTNAME###</label>
+			<br/>
+			<input type="text" id="conf_firstname" size="40">
+			<br/>
+			<br/>
+			<label for="conf_lastname">###LBL_LASTNAME###</label>
+			<br/>
+			<input type="text" id="conf_lastname" size="40">
+			<br/>
+			<br/>
+			<label for="conf_phone">###LBL_PHONE###</label>
+			<br/>
+			<input type="text" id="conf_phone" size="40">
+			<br/>
+			<br/>
+			<label for="conf_email">###LBL_EMAIL###</label>
+			<br/>
+			<input type="text" id="conf_email" size="40">
+			<br/>
+			<div id="conf_initiator">
+				<br/>
+				<input type="checkbox" id="conf_initiator_input">&nbsp;<label for="conf_initiator_input">###LBL_INITIATOR###</label>
+				<br/>
+			</div>
+			<br/>
+			<input type="button" id="conf_add_participant_button" value="###VAL_ADD_PARTICIPANT###" onclick="confcall_core_newParticipant();">
+			<input type="button" id="conf_commit_button" value="###VAL_COMMIT_CONFERENCE###" onclick="confcall_core_commitConference();" disabled="disabled">
+			<input type="hidden" id="conf_id" value="###CONF_ID###">
+			<input type="hidden" id="conf_type" value="###CONF_TYPE###">
+			<input type="hidden" id="conf_yes" value="###VAL_YES###"/>
+			<input type="hidden" id="conf_no" value="###VAL_NO###"/>
+			<input type="hidden" id="conf_remove" value="###VAL_REMOVE###"/>
+		</form>
+		<br/>
+		<a href="#" onclick="confcall_core_removeConference_cancel_link('###CONF_ID###', '###HRF_START_PAGE###');return false;">###LNK_TEMPLATE_CANCEL###</a>
+	</div>
+<!-- ###TPL_PARTICIPANTS### end -->
+
+<!-- ###TPL_RUNNING_CONF### begin -->
+	<div id="conf_running" style="display:none;">
+		<form>
+			<b>###LBL_CONF_DURATION###:</b>&nbsp;<span id="conf_duration_m">###SPN_MINUTES###</span>:<span id="conf_duration_s">###SPN_SECONDS###</span>
+			<br/>
+			<b>###LBL_PARTICIPANTS###:</b>
+			<br/>
+			<table class="dgtable">
+				<thead>
+					<tr>
+						<td>###LBL_FIRSTNAME###<br/>###LBL_LASTNAME###<br/>###LBL_EMAIL###</td>
+						<td>###LBL_PHONE###<br/>###LBL_INITIATOR###</td>
+						<td>###LBL_STATUS###</td>
+						<td>###LBL_MUTED###</td>
+						<td colspan="4">###LBL_ACTION###</td>
+					</tr>
+				</thead>
+				<tbody id="conf_running_table"></tbody>
+			</table>
+		</form>
+	</div>
+<!-- ###TPL_RUNNING_CONF### end -->
+
+<!-- ###TPL_CONFERENCE_END### begin -->
+	<div id="conf_end" style="display:none;">
+		<div id="conf_end_div" style="display:none;">
+			<span id="conf_end_text"></span>
+			<br/>
+			<br/>
+		</div>
+		<a href="###HRF_START_PAGE###">###LNK_BACK###</a>
+	</div>
+<!-- ###TPL_CONFERENCE_END### end -->
+</html>
